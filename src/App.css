@@ -1,0 +1,200 @@
+/* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.app {
+  background-color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 1rem;
+}
+
+/* Game Container */
+.game-container {
+  width: 100%;
+  max-width: 350px;
+  background-color: #34495e;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.game-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.game-status {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  min-height: 1.8rem;
+}
+
+/* Scoreboard */
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  background-color: #2c3e50;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.score-item {
+  text-align: center;
+  flex: 1;
+  padding: 0.5rem;
+}
+
+.score-symbol {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.x-symbol {
+  color: #3498db;
+}
+
+.o-symbol {
+  color: #e74c3c;
+}
+
+.tie-symbol {
+  color: #f1c40f;
+  font-size: 0.9rem;
+}
+
+.score-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Toast Notification */
+.toast {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3498db;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+  from {
+    top: -50px;
+    opacity: 0;
+  }
+  to {
+    top: -40px;
+    opacity: 1;
+  }
+}
+
+/* Symbol Selector */
+.symbol-selector, .mode-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Game Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.square {
+  width: 100%;
+  height: 70px;
+  background-color: #2c3e50;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.square:hover:not(.filled) {
+  background-color: #3d5871;
+}
+
+.square.filled {
+  cursor: not-allowed;
+}
+
+/* Game Controls */
+.game-controls {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.btn-reset, .btn-mode, .btn-symbol {
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-new-game {
+  background-color: #27ae60;
+  padding: 0.5rem 1.5rem;
+}
+
+.btn-new-game:hover {
+  background-color: #2ecc71;
+}
+
+.btn-back {
+  margin-top: 1rem;
+  background-color: #7f8c8d;
+}
+
+.btn-back:hover {
+  background-color: #95a5a6;
+}
