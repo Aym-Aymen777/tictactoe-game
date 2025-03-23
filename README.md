@@ -27,7 +27,7 @@ Welcome to the **Tic-Tac-Toe** game built with React! ⚛️🔥
 
 ## 📸 Preview
 
-![Tic-Tac-Toe Preview](screenshot.png)
+![Tic-Tac-Toe Preview](./src/public/screenshot.png)
 
 ## 🏗️ Technologies Used
 - ⚛️ React.js
